@@ -46,16 +46,23 @@ img {
   box-sizing: border-box;
 }
 /*======== Header========= */
+
+.container {
+  padding: 0 16px 0 16px;
+}
+
 .header {
   background-color: #ffffff;
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
 }
+
 .header-box {
   display: flex;
   justify-content: space-between;
 }
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -66,7 +73,7 @@ img {
 }
 
 .address {
-  display: flex;
+  display:flex;
   gap: 40px;
 }
 .logo-header {
@@ -78,11 +85,10 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+
 }
 .logo-span {
   color: #2e2f42;
-  font-size: 16px;
   font-weight: 500;
   line-height: 1.5; 
   letter-spacing: 0.02em;
@@ -98,15 +104,34 @@ img {
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 24px 0;
+  padding: 24px 24px;
 }
 .link-nav:hover,
 .link-nav:focus {
   color: #404bbf;
 }
 .adress-header {
+  display: none;
+  display: flex;
   font-style: normal;
 }
+
+
+@media screen and (min-width: 1158px) {
+  .adress-header {
+    display: flex;
+  }
+  .address {
+    display: flex;
+  }
+}
+
+@media screen  and (min-width: 320px) {
+  .header {
+ 
+  }
+}
+
 .link-address {
   color: #434455;
   font-size: 16px;
@@ -120,7 +145,7 @@ img {
   color: #404bbf;
 }
 .hero-section {
-  background: url(./images/photoshoptet.png);
+  background: url(./images/phone.jpg);
   height: 600px;
   padding: 188px 0;
   background-size: cover;
@@ -128,19 +153,38 @@ img {
   background-position: center center;
   margin: 0 auto;
 }
+.menu {
+  display: none;
+}
 
-@media screen and (max-width: 320px) {
-.hero-section {
-  background-image:
-    url(./images/phone.jpg);
+
+.address {
+  display: flex;
 }
+.mob-btn-button {
+  background-color: transparent;
+  border: none;
+   padding: 0;
+  line-height: 0;
 }
-@media screen and (max-width: 768px) {
+.mobile-menu-burger {
+  fill: #4d5ae5;
+}
+
+@media screen and (min-width: 768px) {
 .hero-section {
   background-image: 
-  url();
+  url(./images/Teta.tablet.dog.jpg);
+}
+.menu {
+  display: flex;
+}
+.mob-btn-button {
+  display: none;
 }
 }
+
+
 
 .hero-box {
   display: flex;
@@ -235,24 +279,36 @@ img {
     width: 100%;
     height: 80%;
 }
-.about-dog {
-    width: 260px;
-    height: 260px;
-    overflow: hidden;
-}
+
 .dog-section-about {
     padding: 80px 0; 
 }
-.adapt-pic {
-    display: flex;
-    justify-content: center;
+
+.gallery-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
 }
-.pic-dog {
-    width: 250px;
-    background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin: 0 auto;  
+
+.gallery-item {
+  padding: .5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color:steelblue;
+  color: #d9d9d9;
+  scroll-snap-align: center;
+}
+
+
+.about-dog {
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
 }
 .list-dog {
     display: flex;
@@ -285,18 +341,79 @@ img {
 }  
 .dog-adapt-section {
     display: flex;
+    flex-direction: column;
     gap: 24px;
     justify-content:space-around;
     margin: 40px 0;
 }
-.adapt-about {
-    width: 260px;
-    height: 100%;
+
+
+
+.footer-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: column;
+  
+}
+@media screen and (min-width: 768px) {
+
+  .dog-adapt-section {
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+ .footer-box {
+  flex-direction: row;
+ }
+
+}
+
+@media screen and (min-width: 1158px) {
+.hero-section {
+  background-image:
+    url(./images/photoshoptet.png);
+}
+.dog-adapt-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+}
+.pictures-tet {
+  width: 100%;
+  height: 100%;
+  margin-right: 40px;
 }
 .paragraph-adapt {
+  max-width: 600px;
+  margin: 40px;
+}
+.adapt-about {
+  justify-content: center;
+  max-width: 600px;
+  min-height: 600px;
+}
+}
+
+
+
+.adapt-about {
+    width: 100%;
     height: 100%;
-    width: 360px;
+    
+}
+.pic-dog {
+  width: 100%;
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;  
+}
+.paragraph-adapt {
+   max-width: 600px;
     font-size: 20px;
 }
 .toffe-story{
@@ -311,21 +428,16 @@ img {
     height: 100%;
     }
 .teta-dog-pic {
-   width: 650px;
+   width: 100%;
 }
 .section-footer {
   background: darkblue;
   padding-top: 60px;
-  padding-left: 100px;
+  /* padding-left: 100px; */
   padding-right: 100px;
   padding-bottom: 60px;
 }
-.footer-box {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  
-}
+
 .footer-content {
   margin-right: 120px;
 }
