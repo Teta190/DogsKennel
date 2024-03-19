@@ -389,6 +389,8 @@ img {
 .paragraph-adapt {
   max-width: 600px;
   margin: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .adapt-about {
   justify-content: center;
@@ -414,6 +416,8 @@ img {
 .paragraph-adapt {
    max-width: 600px;
     font-size: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 .toffe-story{
   color:darkblue;
